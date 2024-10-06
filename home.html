@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Kingdom - Home</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #70e1f5, #ffd194);
+            color: #333;
+        }
+        
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        header {
+            text-align: center;
+            padding: 50px 0;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+        
+        h1 {
+            font-size: 3em;
+            color: #2c3e50;
+        }
+        
+        .welcome-text {
+            font-size: 1.2em;
+            margin-bottom: 30px;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            line-height: 1.6;
+        }
+        
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            animation: slideUp 1s ease-out;
+        }
+        
+        .animal-card {
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            overflow: hidden; /* Add this line */
+        }
+        
+        .animal-card:hover {
+            transform: translateY(-5px) scale(1.03);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15);
+        }
+        
+        .animal-card:hover h2 {
+            text-decoration: underline;
+        }
+        
+        .image-container {
+            width: 100%;
+            height: 200px; /* Set a fixed height for all image containers */
+            overflow: hidden;
+            margin-bottom: 15px;
+        }
+        
+        .animal-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .animal-card:hover img {
+            transform: scale(1.1);
+        }
+        
+        .animal-card h2 {
+            color: #3498db;
+            margin-bottom: 10px;
+        }
+        
+        .animal-card p {
+            font-size: 0.9em;
+            color: #555;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes slideUp {
+            from { transform: translateY(50px); opacity: 0; }
+            to { transform: translateY(0); opacity: 1; }
+        }
+        
+        .nav-menu {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            display: flex;
+            gap: 20px;
+            z-index: 1000;
+        }
+        
+        .nav-menu a {
+            color: #2c3e50;
+            text-decoration: none;
+            font-weight: 600;
+            transition: color 0.3s ease;
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+        
+        .nav-menu a:hover {
+            color: #3498db;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+        }
+        
+        .fireworks {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+        }
+    </style>
+</head>
+<body>
+    <div class="fireworks"></div>
+    <nav class="nav-menu">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#animals">Animals</a>
+        <a href="#contact">Contact</a>
+    </nav>
+    
+    <div class="container">
+        <header>
+            <h1>Welcome to the Animal Kingdom</h1>
+            <p class="welcome-text">Embark on an exciting journey through the diverse and fascinating world of animals. Our website is your gateway to exploring the wonders of nature, from the majestic lions of the savannah to the playful dolphins of the ocean. Discover amazing creatures, learn about their habitats, and uncover the secrets of their survival. Get ready to be amazed by the beauty and complexity of the animal kingdom!</p>
+        </header>
+        
+        <div class="animal-grid">
+            <a href="lion.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/1912176/pexels-photo-1912176.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Lion">
+                </div>
+                <h2>Lion</h2>
+                <p>The king of the jungle, found in Africa and parts of Asia.</p>
+            </a>
+            <a href="elephant.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/3739325/pexels-photo-3739325.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Elephant">
+                </div>
+                <h2>Elephant</h2>
+                <p>Gentle giants with incredible memory, native to Africa and Asia.</p>
+            </a>
+            <a href="penguin.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/3889695/pexels-photo-3889695.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Penguin">
+                </div>
+                <h2>Penguin</h2>
+                <p>Flightless birds adapted to life in the cold waters of the Southern Hemisphere.</p>
+            </a>
+            <a href="dolphin.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/6149477/pexels-photo-6149477.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Dolphin">
+                </div>
+                <h2>Dolphin</h2>
+                <p>Intelligent marine mammals found in oceans worldwide.</p>
+            </a>
+            <a href="panther.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/11092292/pexels-photo-11092292.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Panther">
+                </div>
+                <h2>Panther</h2>
+                <p>Powerful and stealthy big cats, known for their dark coat and agile hunting skills.</p>
+            </a>
+            <a href="leopard.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/51129/leopard-animal-cat-cheetah-51129.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Leopard">
+                </div>
+                <h2>Leopard</h2>
+                <p>Adaptable and elusive big cats with distinctive spotted coats, found across Africa and Asia.</p>
+            </a>
+            <a href="shark.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/8910272/pexels-photo-8910272.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Shark">
+                </div>
+                <h2>Shark</h2>
+                <p>Apex predators of the ocean, with a lineage dating back over 400 million years.</p>
+            </a>
+            <a href="eagle.html" class="animal-card">
+                <div class="image-container">
+                    <img src="https://images.pexels.com/photos/36846/bald-eagle-adler-bird-of-prey-raptor.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Eagle">
+                </div>
+                <h2>Eagle</h2>
+                <p>Powerful birds of prey known for their keen eyesight and majestic flight.</p>
+            </a>
+        </div>
+        
+        <footer>
+            <p>&copy; 2023 Animal Kingdom. All rights reserved.</p>
+        </footer>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/fireworks-js@2.x/dist/index.umd.js"></script>
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Fireworks animation
+        const container = document.querySelector('.fireworks');
+        const fireworks = new Fireworks.default(container, {
+            autoresize: true,
+            opacity: 0.5,
+            acceleration: 1.05,
+            friction: 0.97,
+            gravity: 1.5,
+            particles: 50,
+            traceLength: 3,
+            traceSpeed: 10,
+            explosion: 5,
+            intensity: 30,
+            flickering: 50,
+            lineStyle: 'round',
+            hue: {
+                min: 0,
+                max: 360
+            },
+            delay: {
+                min: 30,
+                max: 60
+            },
+            rocketsPoint: {
+                min: 50,
+                max: 50
+            },
+            lineWidth: {
+                explosion: {
+                    min: 1,
+                    max: 3
+                },
+                trace: {
+                    min: 1,
+                    max: 2
+                }
+            },
+            brightness: {
+                min: 50,
+                max: 80
+            },
+            decay: {
+                min: 0.015,
+                max: 0.03
+            },
+            mouse: {
+                click: false,
+                move: false,
+                max: 1
+            }
+        });
+
+        fireworks.start();
+        setTimeout(() => fireworks.stop(), 5000); // Stop after 5 seconds
+    </script>
+</body>
+</html>
